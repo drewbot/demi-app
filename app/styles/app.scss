@@ -1,5 +1,59 @@
 @import "bootstrap";
 
-h2 {
-	color: red;
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.container-fluid {
+	max-width: 1020px;
+}
+
+header {
+	height: 100px;
+	background-color: #4C5763;
+}
+
+// ------ Variables ------
+
+// primary
+$blue: #4C5763;
+$bluegreen: #2FD3BF;
+$green: #3EC173;
+$yellow: #E5BD41;
+$orange: #E0813B;
+$red: #C64C46;
+
+// secondary
+$bluegrey: #485561; // (grader directory)
+$lightblue: #DFE9ED; // (light version bg color)
+$lightbluegrey: #F0F7F6; // (vanilla button color)
+$white: #FFFFFF; // (standard white for bgs and whatnots)
+
+// ------ Mixins ------
+
+@mixin primary-button($bg-color, $color, $padding-t, $padding-b) {
+    padding: $padding-t 0 $padding-b 0;
+    height: 40px;
+    width: 100%;
+    background-color: $bg-color;
+    color: $color;
+    text-align: center;
+    border: 1px solid darken($bg-color, 5%);
+    border-bottom: 3px solid darken($bg-color, 10%);
+    outline: none;
+    @include transition(all 80ms ease-in);
+    &:hover {
+        background-color: lighten($bg-color, 5%);
+        border-color: darken($bg-color, 10%);
+        border-bottom-color: darken($bg-color, 15%);
+    }
+    &:active {
+        margin-top: 2px;
+        border-width: 1px;
+        height: 38px;
+    }
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DemiApp</title>
@@ -16,6 +18,27 @@
   </head>
   <body>
     {{content-for 'body'}}
+
+
+    <header>
+    <div class='container-fluid'>
+      <div class='row'>
+        <nav class='col-xs-12 col-sm-10'>
+          <ul class='list-inline'>
+            <li><a href='#/'>DASHBOARD</a>
+            </li>
+            <li><a href='#/'>COLLECTOR</a>
+            </li>
+            <li><a href='#/'>PLANNER</a>
+            </li>
+          </ul>
+        </nav>
+        <div class='logout col-xs-4 col-sm-2'>
+          <button>logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
     <script src="assets/vendor.js"></script>
     <script src="assets/demi-app.js"></script>
