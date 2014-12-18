@@ -1,25 +1,8 @@
 @import "bootstrap";
 
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Fjalla One', sans-serif;
-}
-
-.container-fluid {
-	max-width: 1020px;
-}
-
-header {
-	height: 100px;
-	background-color: #4C5763;
-}
-
 // ------ Variables ------
 
-// primary
+// primary color
 $blue: #4C5763;
 $bluegreen: #2FD3BF;
 $green: #3EC173;
@@ -27,14 +10,36 @@ $yellow: #E5BD41;
 $orange: #E0813B;
 $red: #C64C46;
 
-// secondary
+// secondary color
+$darkblue: darken($blue, 12%);
 $bluegrey: #485561; // (grader directory)
 $lightblue: #DFE9ED; // (light version bg color)
 $lightbluegrey: #F0F7F6; // (vanilla button color)
 $white: #FFFFFF; // (standard white for bgs and whatnots)
 
+// type
+$primary-typeface: 'Source Sans Pro', sans-serif;
+$secondary-typeface: 'Fjalla One', sans-serif;
+
 // ------ Mixins ------
 
+// Text
+@mixin primary-text($size, $weight, $style, $color) {
+    font-family: $primary-typeface;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    color: $color;
+}
+
+@mixin secondary-text($size, $color) {
+    font-family: $secondary-typeface;
+    font-size: $size;
+    letter-spacing: 0.06em;
+    color: $color;
+}
+
+// Button
 @mixin primary-button($bg-color, $color, $padding-t, $padding-b) {
     padding: $padding-t 0 $padding-b 0;
     height: 40px;
@@ -56,4 +61,54 @@ $white: #FFFFFF; // (standard white for bgs and whatnots)
         border-width: 1px;
         height: 38px;
     }
+}
+
+body {
+	font-family: $primary-typeface;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $secondary-typeface;
+}
+
+.container-fluid {
+	max-width: 1020px;
+}
+
+// ----- Header -----
+header {
+	background-color: $blue;
+	
+	height: 100px;
+  nav {
+  	padding: 30px 0 30px 0;
+  	ul {
+  		margin-bottom: 0;
+  		padding: 8px 0 0 0;
+	    a {
+	      margin-right: 20px;
+	      padding-bottom: 35px;
+	      @include secondary-text(1.3em, $white);
+	      &:hover {
+	          color: $bluegreen;
+	          text-decoration: none;
+	          border-bottom: 3px solid $bluegreen;
+	      }
+	    }
+	  }
+  }
+  .logout {
+  	padding-top: 30px;
+    padding-bottom: 30px;
+    button {
+        @include primary-text(1.1em, 300, normal, $white);
+        @include primary-button($blue, $white, 0px, 0px);
+    }
+  }
+}
+
+// ----- Profile -----
+.profile {
+	background-color: $darkblue;
+	padding: 30px 0 30px 0;
 }
