@@ -73,43 +73,47 @@ h1, h2, h3, h4, h5, h6 {
 
 .container-fluid {
 	max-width: 1020px;
+	padding: 0;
+}
+
+div.special > div[class*="col-"] {
+	padding: 0; 
 }
 
 // ----- Header -----
 header {
+	padding: 0 15px 0 15px;
 	background-color: $blue;
 	height: 100px;
-	.row {
-		padding: 0 5px 0 20px;
-	  nav {
-	  	padding: 30px 0 30px 0;
-	  	ul {
-	  		margin-bottom: 0;
-	  		padding: 10px 0 0 0;
-		    a {
-		      margin-right: 20px;
-		      padding: 36px 0 36px 0;
-		      @include secondary-text(1.2em, $white);
-		      &:hover {
-	          color: $bluegreen;
-	          text-decoration: none;
-	          border-bottom: 3px solid $bluegreen;
-		      }
-		    }
-		  }
-	  }
-	  .logout {
-	  	padding-top: 30px;
-	    padding-bottom: 30px;
-	    button {
-	      @include primary-text(1.1em, 300, normal, $white);
-	      @include primary-button($blue, $white, 0px, 0px);
-	      span {
-	        padding-top: 2px;
-	        font-size: 1.2em;
+  nav {
+  	padding: 30px 5px 30px 5px;
+  	ul {
+  		margin-bottom: 0;
+  		padding: 10px 0 0 0;
+	    a {
+	      margin-right: 20px;
+	      padding: 36px 0 36px 0;
+	      @include secondary-text(1.2em, $white);
+	      &:hover {
+          color: $bluegreen;
+          text-decoration: none;
+          border-bottom: 3px solid $bluegreen;
 	      }
 	    }
 	  }
+  }
+  .logout {
+  	// default bootsrap left and right padding are being applied
+  	padding-top: 30px;
+  	padding-bottom: 30px;
+    button {
+      @include primary-text(1.1em, 300, normal, $white);
+      @include primary-button($blue, $white, 0px, 0px);
+      span {
+        padding-top: 2px;
+        font-size: 1.2em;
+      }
+    }
   }
 }
 
