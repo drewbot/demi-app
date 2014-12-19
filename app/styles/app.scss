@@ -76,17 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
-div.special > div[class*="col-"] {
-	padding: 0; 
-}
-
 // ----- Header -----
 header {
-	padding: 0 15px 0 15px;
+	padding: 30px 15px 30px 15px;
 	background-color: $blue;
 	height: 100px;
   nav {
-  	padding: 30px 5px 30px 5px;
   	ul {
   		margin-bottom: 0;
   		padding: 10px 0 0 0;
@@ -103,9 +98,6 @@ header {
 	  }
   }
   .logout {
-  	// default bootsrap left and right padding are being applied
-  	padding-top: 30px;
-  	padding-bottom: 30px;
     button {
       @include primary-text(1.1em, 300, normal, $white);
       @include primary-button($blue, $white, 0px, 0px);
@@ -120,7 +112,7 @@ header {
 // ----- Profile -----
 .profile {
 	background-color: $darkblue;
-	padding: 30px 0 30px 0;
+	padding: 30px 15px 30px 15px;
 	.profile-pic {
 		height: 240px
 	}
@@ -128,14 +120,14 @@ header {
 		height: 240px
 	}
 	.stats-wide {
-		padding: 0 5px 10px 5px;
+		padding-bottom: 10px;
 		div {
 			height: 100px;
 			background-color: $blue;
 		}
 	}
 	.stats-half {
-		padding: 0 5px 10px 5px;
+		padding-bottom: 10px;
 		div {
 			height: 75px;
 			background-color: $blue;
@@ -145,10 +137,10 @@ header {
 
 // ----- Filter section -----
 .filter-course {
-  height: 150px;
+	padding: 30px 15px 30px 15px;
   .dropdown{
     h4 {
-      margin: 30px 0 30px 0;
+      margin: 0 0 30px 0;
       width: 100%;
       text-align: center;
       @include primary-text(1.2em, 300, normal, $blue);
@@ -156,7 +148,6 @@ header {
     ul {
       padding: 12px 0 12px 0;
       width: 100%;
-      // anchor should be outside of li
       li {
         padding: 3px 10px 3px 10px;
         text-align: center;
@@ -183,28 +174,4 @@ header {
   }
 }
 
-// ----- Bar Graph Comparison -----
-.bar-comparison {
-	background-color: $darkblue;
-	padding: 30px 0 30px 0;
-	.user-card {
-		height: 240px
-	}
-	.user-info {
-		height: 240px
-	}
-	.stats-wide {
-		padding: 0 20px 10px 20px;
-		div {
-			height: 100px;
-			background-color: $blue;
-		}
-	}
-	.stats-half {
-		padding: 0 5px 10px 5px;
-		div {
-			height: 75px;
-			background-color: $blue;
-		}
-	}
-}
+
