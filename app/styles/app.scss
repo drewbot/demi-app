@@ -11,7 +11,7 @@ $orange: #E0813B;
 $red: #C64C46;
 
 // secondary color
-$darkblue: darken($blue, 12%);
+$darkblue: darken($blue, 14%);
 $bluegrey: #485561; // (grader directory)
 $lightblue: #DFE9ED; // (light version bg color)
 $lightbluegrey: #F0F7F6; // (vanilla button color)
@@ -78,32 +78,38 @@ h1, h2, h3, h4, h5, h6 {
 // ----- Header -----
 header {
 	background-color: $blue;
-	
 	height: 100px;
-  nav {
-  	padding: 30px 0 30px 0;
-  	ul {
-  		margin-bottom: 0;
-  		padding: 8px 0 0 0;
-	    a {
-	      margin-right: 20px;
-	      padding-bottom: 35px;
-	      @include secondary-text(1.3em, $white);
-	      &:hover {
+	.row {
+		padding: 0 5px 0 20px;
+	  nav {
+	  	padding: 30px 0 30px 0;
+	  	ul {
+	  		margin-bottom: 0;
+	  		padding: 10px 0 0 0;
+		    a {
+		      margin-right: 20px;
+		      padding: 36px 0 36px 0;
+		      @include secondary-text(1.2em, $white);
+		      &:hover {
 	          color: $bluegreen;
 	          text-decoration: none;
 	          border-bottom: 3px solid $bluegreen;
+		      }
+		    }
+		  }
+	  }
+	  .logout {
+	  	padding-top: 30px;
+	    padding-bottom: 30px;
+	    button {
+	      @include primary-text(1.1em, 300, normal, $white);
+	      @include primary-button($blue, $white, 0px, 0px);
+	      span {
+	        padding-top: 2px;
+	        font-size: 1.2em;
 	      }
 	    }
 	  }
-  }
-  .logout {
-  	padding-top: 30px;
-    padding-bottom: 30px;
-    button {
-        @include primary-text(1.1em, 300, normal, $white);
-        @include primary-button($blue, $white, 0px, 0px);
-    }
   }
 }
 
@@ -111,4 +117,90 @@ header {
 .profile {
 	background-color: $darkblue;
 	padding: 30px 0 30px 0;
+	.profile-pic {
+		height: 240px
+	}
+	.profile-info {
+		height: 240px
+	}
+	.stats-wide {
+		padding: 0 5px 10px 5px;
+		div {
+			height: 100px;
+			background-color: $blue;
+		}
+	}
+	.stats-half {
+		padding: 0 5px 10px 5px;
+		div {
+			height: 75px;
+			background-color: $blue;
+		}
+	}
+}
+
+// ----- Filter section -----
+.filter-course {
+  height: 150px;
+  .dropdown{
+    h4 {
+      margin: 30px 0 30px 0;
+      width: 100%;
+      text-align: center;
+      @include primary-text(1.2em, 300, normal, $blue);
+    }
+    ul {
+      padding: 12px 0 12px 0;
+      width: 100%;
+      // anchor should be outside of li
+      li {
+        padding: 3px 10px 3px 10px;
+        text-align: center;
+        a {
+          @include primary-text(1.2em, 300, normal, $blue);
+          width: 100%;
+          height: 100%;
+          outline: none;
+          &:hover {
+            // text-decoration: none;
+          }
+        }
+        &:hover {
+          background-color: #C4F478;
+          // cursor: pointer;
+        }
+      }
+    }
+    button {
+      @include primary-button($blue, $white, 0px, 0px);
+      font-weight: 300;
+      font-size: 1.1em;
+    }
+  }
+}
+
+// ----- Bar Graph Comparison -----
+.bar-comparison {
+	background-color: $darkblue;
+	padding: 30px 0 30px 0;
+	.user-card {
+		height: 240px
+	}
+	.user-info {
+		height: 240px
+	}
+	.stats-wide {
+		padding: 0 20px 10px 20px;
+		div {
+			height: 100px;
+			background-color: $blue;
+		}
+	}
+	.stats-half {
+		padding: 0 5px 10px 5px;
+		div {
+			height: 75px;
+			background-color: $blue;
+		}
+	}
 }

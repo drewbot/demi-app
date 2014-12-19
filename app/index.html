@@ -31,9 +31,12 @@
             </li>
             <li><a href='#/'>PLANNER</a>
             </li>
+            <li><a href='#/'>GRADER</a>
+            </li>
           </ul>
         </nav>
-        <div class='logout col-xs-4 col-sm-2'>
+        <div class='logout hidden-xs col-sm-2'>
+          <!-- <button><span class="glyphicons glyphicons-user"></span></button> -->
           <button>logout</button>
         </div>
       </div>
@@ -44,14 +47,76 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class="profile-pic col-xs-6 col-sm-4">
-          
+          <!-- <img src="/assets/mason.jpg"> -->
         </div>
         <div class="profile-info col-xs-6 col-sm-4">
           
         </div>
         <div class="profile-stats col-xs-12 col-sm-4">
+          <div class="stats-wide col-xs-12"><div></div></div>
+          <div class="stats-half col-xs-6"><div></div></div>
+          <div class="stats-half col-xs-6"><div></div></div>
+          <div class="stats-half col-xs-6"><div></div></div>
+          <div class="stats-half col-xs-6"><div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='filter-bg'>
+    <div class='container-fluid'>
+      <div class='filter-course row'>
+        <div class='course col-xs-4'>
+          <div class='dropdown'>
+            <h4>Course</h4>
+            <button id='dropdownMenu1' type='button' data-toggle='dropdown' class='dropdown-toggle'>
+              <span class='button-text'>choose</span>
+              <span class='caret'></span>
+            </button>
+            <ul role='menu' aria-labelledby='dropdownMenu1' class='dropdown-menu' id='course-list-dropdown'>
+            </ul>
+          </div>
+        </div>
+        <div class='timeline col-xs-4'>
+          <div class='dropdown'>
+            <h4>Timeline</h4>
+            <button id='dropdownMenu1' type='button' data-toggle='dropdown' class='dropdown-toggle'>
+              <span class='button-text'>choose</span>
+              <span class='caret'></span>
+            </button>
+            <ul role='menu' aria-labelledby='dropdownMenu1' class='dropdown-menu' id='timeline-list-dropdown'>
+            </ul>
+          </div>
+        </div>
+        <div class='week col-xs-4'>
+          <div class='dropdown'>
+            <h4>Week</h4>
+            <button id='dropdownMenu1' type='button' data-toggle='dropdown' class='dropdown-toggle'>
+              <span class='button-text'>choose</span>
+              <span class='caret'></span>
+            </button>
+            <ul role='menu' aria-labelledby='dropdownMenu1' class='dropdown-menu' id='week-list-dropdown'>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bar-comparison">
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class="user-card col-xs-6 col-sm-4">
+          <!-- <img src="/assets/mason.jpg"> -->
+        </div>
+        <div class="user-info col-xs-6 col-sm-4">
           
         </div>
+        <div class="stats-wide col-xs-12 col-sm-4"><div></div></div>
+        <div class="stats-half col-xs-6 col-sm-2"><div></div></div>
+        <div class="stats-half col-xs-6 col-sm-2"><div></div></div>
+        <div class="stats-half col-xs-6 col-sm-2"><div></div></div>
+        <div class="stats-half col-xs-6 col-sm-2"><div></div></div>
       </div>
     </div>
   </section>
