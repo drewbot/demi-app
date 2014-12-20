@@ -87,10 +87,10 @@ header {
   		margin-bottom: 0;
   		padding: 10px 0 0 0;
 	    a {
-	      margin-right: 20px;
-	      padding: 40px 0 31px 0;
+	      padding: 40px 10px 31px 10px;
 	      @include secondary-text(1.4em, $white);
 	      &:hover {
+	      	background-color: darken($blue, 12%);
           color: $bluegreen;
           text-decoration: none;
           border-bottom: 3px solid $bluegreen;
