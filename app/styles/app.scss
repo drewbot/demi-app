@@ -149,9 +149,24 @@ header {
 		&:last-of-type {
 			padding-bottom: 0;
 		}
-		div {
+		.stats-wide-inner {
+			padding: 15px;
 			height: 100px;
 			background-color: $blue;
+			color: $white;
+			.stats-content {
+				margin: 0 auto;
+				display: inline-block;
+				.stats-number {
+					display: inline-block;
+					@include secondary-text(3.8em, $white);
+				}
+				.stats-text {
+					display: inline-block;
+					@include primary-text(1em, 100, normal, $white);
+					line-height: 0.8em;
+				}
+			}
 		}
 	}
 	.stats-half {
@@ -160,9 +175,24 @@ header {
 		&:nth-last-of-type(-n+2) {
 			padding-bottom: 0;
 		}
-		div {
+		.stats-half-inner {
+			padding: 15px;
 			height: 75px;
 			background-color: $blue;
+			color: $white;
+			.stats-content {
+				margin: 0 auto;
+				display: inline-block;
+				.stats-number {
+					display: inline-block;
+					@include secondary-text(2.6em, $white);
+				}
+				.stats-text {
+					display: inline-block;
+					@include primary-text(1em, 100, normal, $white);
+					line-height: 0.8em;
+				}
+			}
 		}
 	}
 }
