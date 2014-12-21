@@ -119,13 +119,6 @@ header {
 	padding: 30px 15px 30px 15px;
 	.profile-image {
 		padding: 0 15px 0 15px;
-		&:before {
-		  content: '';
-		  display: inline-block;
-		  height: 100%;
-		  vertical-align: middle;
-		  margin-right: -0.25em; /* Adjusts for spacing */
-		}
 		img {
 			display: block;
 	    margin: auto;
