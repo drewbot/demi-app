@@ -35,7 +35,6 @@ $secondary-typeface: 'Fjalla One', sans-serif;
 @mixin secondary-text($size, $color) {
     font-family: $secondary-typeface;
     font-size: $size;
-    letter-spacing: 0.06em;
     color: $color;
 }
 
@@ -157,21 +156,43 @@ header {
 			padding-bottom: 0;
 		}
 		.stats-wide-inner {
+			position: relative;
 			padding: 15px;
 			height: 100px;
 			background-color: $blue;
 			color: $white;
+			transition: all 200ms ease-in;
+			&:after {
+				content: ' ';
+				display: none;
+				position: absolute;
+				top: 0;
+				right:0;
+				height: 100px;
+				width: 4px;
+				background-color: $bluegreen;
+			}
+			&:hover {
+				background-color: darken($blue, 18%);
+				cursor: pointer;
+				&:after {
+					display: inline-block;
+				}
+				.stats-content {
+					color: $bluegreen;
+				}
+			}
 			.stats-content {
 				margin: 0 auto;
 				display: inline-block;
+				@include secondary-text(3.8em, $white);
 				.stats-number {
 					display: inline-block;
-					@include secondary-text(3.8em, $white);
 				}
 				.stats-text {
 					display: inline-block;
-					@include primary-text(1em, 100, normal, $white);
-					line-height: 0.8em;
+					font-size: 0.4em;
+					line-height: 0.7em;
 				}
 			}
 		}
@@ -187,17 +208,37 @@ header {
 			height: 75px;
 			background-color: $blue;
 			color: $white;
+			&:after {
+				content: ' ';
+				display: none;
+				position: absolute;
+				top: 0;
+				right:0;
+				height: 75px;
+				width: 4px;
+				background-color: $bluegreen;
+			}
+			&:hover {
+				background-color: darken($blue, 18%);
+				cursor: pointer;
+				&:after {
+					display: inline-block;
+				}
+				.stats-content {
+					color: $bluegreen;
+				}
+			}
 			.stats-content {
 				margin: 0 auto;
 				display: inline-block;
+				@include secondary-text(2.6em, $white);
 				.stats-number {
 					display: inline-block;
-					@include secondary-text(2.6em, $white);
 				}
 				.stats-text {
 					display: inline-block;
-					@include primary-text(1em, 100, normal, $white);
-					line-height: 0.8em;
+					font-size: 0.4em;
+					line-height: 0.6em;
 				}
 			}
 		}
@@ -248,7 +289,7 @@ header {
 	padding: 30px 15px 30px 15px;
 	background-color: $darkblue;
 	.graph-key {
-		margin-bottom: 20px;
+		margin-bottom: 45px;
 		color: $white;
 		.graph-key-item {
 			&:first-of-type {
