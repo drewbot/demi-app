@@ -258,7 +258,7 @@ header {
 // ----- Filter section -----
 .filter-module {
 	padding: 35px 15px 35px 15px;
-  .dropdown {
+  .button-wrapper {
     p {
       margin: 0 0 30px 0;
       width: 100%;
@@ -287,8 +287,15 @@ header {
       }
     }
     button {
-      @include primary-button($blue, $white, 0px, 0px);
+    	margin-top: 54px;
+      @include primary-button($lightblue, $blue, 0px, 0px);
       font-weight: 300;
+      font-size: 1.2em;
+    }
+    .select {
+    	margin-top: 0;
+    	@include primary-button($blue, $white, 0px, 0px);
+    	font-weight: 300;
       font-size: 1.2em;
     }
   }
@@ -423,6 +430,73 @@ header {
 			}
 		}
 	}
+}
+
+// ----- Button Gallery section -----
+.button-gallery {
+	padding: 35px 15px 35px 15px;
+  .button-wrapper {
+  	margin-bottom: 35px;
+  	// remove margin bottom from the last 6
+  	&:nth-last-child(-n+6) {
+	  	margin-bottom: 0px;
+	  }
+  	button {
+  		font-weight: 300;
+	    font-size: 1.2em;
+  	}
+  	&:first-of-type {
+	  	button {
+	      @include primary-button($red, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(2) {
+	  	button {
+	      @include primary-button($blue, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(3) {
+	  	button {
+	      @include primary-button($green, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(4) {
+	  	button {
+	      @include primary-button($yellow, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(5) {
+	  	button {
+	      @include primary-button($bluegreen, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(6) {
+	  	button {
+	      @include primary-button($orange, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(7) {
+	  	button {
+	      @include primary-button($darkblue, $white, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(8) {
+	  	button {
+	      @include primary-button($lightbluegrey, $blue, 0px, 0px);
+	  	}
+	  }
+	  &:nth-of-type(9) {
+	  	button {
+	      @include primary-button($lightblue, $blue, 0px, 0px);
+	  	}
+	  }
+    p {
+      margin: 0 0 30px 0;
+      width: 100%;
+      text-align: center;
+      @include primary-text(1.2em, 300, normal, $blue);
+    }
+  }
 }
 
 // Still to do:
