@@ -63,6 +63,27 @@ $secondary-typeface: 'Fjalla One', sans-serif;
     }
 }
 
+// Bar Graph Bar
+@mixin bar($width, $color) {
+	height: 34px;
+	div {
+		&:first-of-type {
+			display: inline-block;
+			width: $width;
+			height: 34px;
+			background-color: darken($color, 5%);
+			border-right: 3px solid lighten($color, 10%);
+		}
+		&:nth-of-type(2) {
+			display: inline-block;
+			padding: 7px 0 30px 10px;
+			height: 34px;
+			vertical-align: top;
+			font-weight: 200;
+		}
+	}
+}
+
 // ----- Clearfix -----
 // Apply class "group" to the parent of floated element(s)
 .group:before,
@@ -94,15 +115,15 @@ h1, h2, h3, h4, h5, h6 {
 
 // ----- Header -----
 header {
-	padding: 30px 15px 30px 15px;
+	padding: 35px 15px 35px 15px;
 	background-color: $blue;
-	height: 100px;
+	height: 110px;
   nav {
   	ul {
   		margin-bottom: 0;
   		padding: 10px 0 0 0;
 	    a {
-	      padding: 40px 10px 31px 10px;
+	      padding: 46px 10px 36px 10px;
 	      @include secondary-text(1.4em, $white);
 	      transition: all 100ms ease-in;
 	      &:hover {
@@ -129,7 +150,7 @@ header {
 // ----- Profile -----
 .profile {
 	background-color: $darkblue;
-	padding: 30px 15px 30px 15px;
+	padding: 35px 15px 35px 15px;
 	.profile-image {
 		padding: 0 15px 0 15px;
 		img {
@@ -159,9 +180,9 @@ header {
 			color: darken($white, 10%);
 			cursor: pointer;
 		}
-		.settings {
-			color: $bluegreen;
-		}
+		// .settings {
+		// 	color: $bluegreen;
+		// }
 	}
 	.stats-wide {
 		padding-bottom: 10px;
@@ -174,24 +195,11 @@ header {
 			padding: 15px;
 			height: 100px;
 			background-color: $blue;
-			color: $white;
 			transition: all 200ms ease-in;
-			&:after {
-				content: ' ';
-				display: none;
-				position: absolute;
-				top: 0;
-				right:0;
-				height: 100px;
-				width: 4px;
-				background-color: $bluegreen;
-			}
 			&:hover {
 				background-color: darken($blue, 18%);
+				border-right: 4px solid $bluegreen;
 				cursor: pointer;
-				&:after {
-					display: inline-block;
-				}
 				.stats-content {
 					color: $bluegreen;
 				}
@@ -199,7 +207,7 @@ header {
 			.stats-content {
 				margin: 0 auto;
 				display: inline-block;
-				@include secondary-text(3.8em, $white);
+				@include secondary-text(3.8em, darken($white, 3%));
 				.stats-number {
 					display: inline-block;
 				}
@@ -221,23 +229,11 @@ header {
 			padding: 15px;
 			height: 75px;
 			background-color: $blue;
-			color: $white;
-			&:after {
-				content: ' ';
-				display: none;
-				position: absolute;
-				top: 0;
-				right:0;
-				height: 75px;
-				width: 4px;
-				background-color: $bluegreen;
-			}
+			transition: all 200ms ease-in;
 			&:hover {
 				background-color: darken($blue, 18%);
 				cursor: pointer;
-				&:after {
-					display: inline-block;
-				}
+				border-right: 3px solid $bluegreen;
 				.stats-content {
 					color: $bluegreen;
 				}
@@ -245,7 +241,7 @@ header {
 			.stats-content {
 				margin: 0 auto;
 				display: inline-block;
-				@include secondary-text(2.6em, $white);
+				@include secondary-text(2.6em, darken($white, 3%));
 				.stats-number {
 					display: inline-block;
 				}
@@ -261,7 +257,7 @@ header {
 
 // ----- Filter section -----
 .filter-module {
-	padding: 30px 15px 30px 15px;
+	padding: 35px 15px 35px 15px;
   .dropdown {
     p {
       margin: 0 0 30px 0;
@@ -300,7 +296,7 @@ header {
 
 // ----- Graph Section 1 -----
 .graph-1 {
-	padding: 30px 15px 30px 15px;
+	padding: 35px 15px 35px 15px;
 	background-color: $darkblue;
 	.graph-key {
 		margin-bottom: 45px;
@@ -366,6 +362,7 @@ header {
 			}
 			.user-name {
 				font-size: 1.2em;
+				font-weight: 400;
 			}
 			.user-type {
 
@@ -393,7 +390,7 @@ header {
 				font-weight: 200;
 			}
 			.user-stats-count {
-				@include secondary-text(1.6em, $white);
+				@include secondary-text(1.4em, $white);
 			}
 		}
 	}
@@ -403,12 +400,38 @@ header {
 			padding-bottom: 0px;
 		}
 		.user-graph-inner {
-			padding: 15px;
+			padding: 30px 15px 30px 0;
 			height: 230px;
 			background-color: $blue;
 			color: $white;
+			.bar {
+				&:first-of-type {
+					@include bar(45%, $bluegreen);
+				}
+				&:nth-of-type(2) {
+					@include bar(67%, $green);
+				}
+				&:nth-of-type(3) {
+					@include bar(32%, $yellow);
+				}
+				&:nth-of-type(4) {
+					@include bar(24%, $orange);
+				}
+				&:nth-of-type(5) {
+					@include bar(7%, $red);
+				}
+			}
 		}
 	}
 }
 
+// Still to do:
+// compile layouts into a pdf and annotate
+// Update nav menu responsiveness
+	 // fix broken responsive elements throughout
+// style dropdowns
+
+// develop planner and grader
+// update collector with newer styling considerations
+// spend some time with chartist graphs
 
