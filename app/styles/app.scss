@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-fluid {
-	max-width: 1020px;
+	max-width: 1100px;
 	padding: 0;
 }
 
@@ -178,11 +178,12 @@ header {
 			display: inline-block;
 			font-weight: 200;
 			color: darken($white, 10%);
+			text-decoration: underline;
 			cursor: pointer;
+			&:hover {
+				color: $bluegreen;
+			}
 		}
-		// .settings {
-		// 	color: $bluegreen;
-		// }
 	}
 	.stats-wide {
 		padding-bottom: 10px;
@@ -259,6 +260,10 @@ header {
 .filter-module {
 	padding: 35px 15px 35px 15px;
   .button-wrapper {
+  	padding-top: 54px;
+  	&:nth-of-type(2) {
+  		padding-top: 0px;
+  	}
     p {
       margin: 0 0 30px 0;
       width: 100%;
@@ -287,13 +292,14 @@ header {
       }
     }
     button {
-    	margin-top: 54px;
       @include primary-button($lightblue, $blue, 0px, 0px);
       font-weight: 300;
       font-size: 1.2em;
+      .glyphicon {
+      	font-size: 0.9em;
+      }
     }
     .select {
-    	margin-top: 0;
     	@include primary-button($blue, $white, 0px, 0px);
     	font-weight: 300;
       font-size: 1.2em;
@@ -364,7 +370,7 @@ header {
 		    margin: auto;
 		    margin: 0 0 20px 0;
 				width: 100%;
-				max-width: 190px;
+				max-width: 126px;
 				border-radius: 50%;
 			}
 			.user-name {
