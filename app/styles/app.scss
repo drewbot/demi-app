@@ -192,7 +192,6 @@ header {
 			padding-bottom: 0;
 		}
 		.stats-wide-inner {
-			position: relative;
 			padding: 15px;
 			height: 100px;
 			background-color: $blue;
@@ -494,7 +493,7 @@ header {
 }
 
 // ----- List Section 1 -----
-.graph-2 {
+.list-module {
 	padding: 35px 15px 35px 15px;
 	background-color: $darkblue;
 	.user-card-med {
@@ -512,7 +511,7 @@ header {
 		    margin: auto;
 		    margin: 0 0 16px 0;
 				width: 100%;
-				max-width: 200px;
+				max-width: 180px;
 				border-radius: 50%;
 			}
 			.user-name {
@@ -540,6 +539,16 @@ header {
 				color: $white;
 				text-align: center;
 				line-height: 1.6em;
+				transition: all 200ms ease-in;
+				&:hover {
+					// padding-left: 19px;
+					background-color: darken($blue, 18%);
+					border-right: 4px solid $bluegreen;
+					cursor: pointer;
+					p {
+						color: $bluegreen;
+					}
+				}
 				.assignment {
 					font-style: normal;
 					font-size: 1.2em;
