@@ -296,7 +296,7 @@ header {
       font-weight: 300;
       font-size: 1.2em;
       .glyphicon {
-      	font-size: 0.9em;
+      	font-size: 0.86em;
       }
     }
     .select {
@@ -353,58 +353,46 @@ header {
 		}
 	}
 	.user-card-small {
-		padding-bottom: 30px;
-		&:last-of-type {
-			padding-bottom: 0px;
+		padding: 25px;
+		height: 230px;
+		background-color: $blue;
+		color: $white;
+		font-weight: 200;
+		text-align: center;
+		line-height: 1.2em;
+		img {
+			display: inline-block;
+	    margin: auto;
+	    margin: 0 0 16px 0;
+			width: 100%;
+			max-width: 126px;
+			border-radius: 50%;
 		}
-		.user-card-small-inner {
-			padding: 20px;
-			height: 230px;
-			background-color: $blue;
-			color: $white;
-			font-weight: 200;
-			text-align: center;
-			line-height: 1.2em;
-			img {
-				display: block;
-		    margin: auto;
-		    margin: 0 0 20px 0;
-				width: 100%;
-				max-width: 126px;
-				border-radius: 50%;
-			}
-			.user-name {
-				font-size: 1.2em;
-				font-weight: 400;
-			}
-			.user-type {
+		.user-name {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		.user-type {
 
-			}
 		}
 	}
 	.user-stats-small {
-		padding-bottom: 30px;
+		margin-bottom: 10px;
+		padding: 15px;
+		height: 110px;
+		background-color: $blue;
+		color: $white;
+		text-align: center;
+		line-height: 1.6em;
+		// The last of these in a column will have no bottom padding
 		&:last-of-type {
-			padding-bottom: 0px;
+			margin-bottom: 0;
 		}
-		.user-stats-small-inner {
-			margin-bottom: 10px;
-			padding: 15px;
-			height: 110px;
-			background-color: $blue;
-			color: $white;
-			text-align: center;
-			line-height: 1.6em;
-			// The last of these in a column will have no bottom padding
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-			.user-stats-title {
-				font-weight: 200;
-			}
-			.user-stats-count {
-				@include secondary-text(1.4em, $white);
-			}
+		.user-stats-title {
+			font-weight: 200;
+		}
+		.user-stats-count {
+			@include secondary-text(1.4em, $white);
 		}
 	}
 	.user-graph {
@@ -503,6 +491,67 @@ header {
       @include primary-text(1.2em, 300, normal, $blue);
     }
   }
+}
+
+// ----- Graph Section 2 -----
+.graph-2 {
+	padding: 35px 15px 35px 15px;
+	background-color: $darkblue;
+	.user-card-med {
+		padding-bottom: 10px;
+		.user-card-med-inner {
+			padding: 30px;
+			height: 430px;
+			background-color: $blue;
+			color: $white;
+			font-weight: 200;
+			text-align: center;
+			line-height: 1.2em;
+			img {
+				display: inline-block;
+		    margin: auto;
+		    margin: 0 0 16px 0;
+				width: 100%;
+				max-width: 200px;
+				border-radius: 50%;
+			}
+			.user-name {
+				font-size: 1.2em;
+				font-weight: 400;
+			}
+		}
+	}
+	.pull-right {
+		padding: 0;
+		// Remove bottom padding from the last user-stats-med
+		&:last-of-type {
+			.user-stats-med {
+				padding-bottom: 0;
+			}
+		}
+		.user-stats-med {
+			padding-bottom: 10px;
+			.user-stats-med-inner {
+				padding: 20px 15px 20px 15px;
+				height: 100px;
+				background-color: $blue;
+				font-weight: 200;
+				font-style: italic;
+				color: $white;
+				text-align: center;
+				line-height: 1.6em;
+				.assignment {
+					font-style: normal;
+					font-size: 1.2em;
+				}
+				.assessment {
+					@include secondary-text(1.4em, $bluegreen);
+					font-style: normal;
+					line-height: 60px;
+				}
+			}
+		}
+	}
 }
 
 // Still to do:
