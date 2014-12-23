@@ -531,6 +531,7 @@ header {
 		.user-stats-med {
 			padding-bottom: 10px;
 			.user-stats-med-inner {
+				position: relative;
 				padding: 20px 15px 20px 15px;
 				height: 100px;
 				background-color: $blue;
@@ -548,6 +549,9 @@ header {
 					p {
 						color: $bluegreen;
 					}
+					.link-helper {
+						display: inline-block;
+					}
 				}
 				.assignment {
 					font-style: normal;
@@ -557,6 +561,15 @@ header {
 					@include secondary-text(1.4em, $bluegreen);
 					font-style: normal;
 					line-height: 60px;
+				}
+				.link-helper {
+					display: none;
+					width: 80%;
+					position: absolute;
+					top: 65px;
+					left: 10%;
+					right: 10%;
+					transition: all 200ms ease-in;
 				}
 			}
 		}
