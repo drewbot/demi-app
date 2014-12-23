@@ -493,7 +493,7 @@ header {
   }
 }
 
-// ----- Graph Section 2 -----
+// ----- List Section 1 -----
 .graph-2 {
 	padding: 35px 15px 35px 15px;
 	background-color: $darkblue;
@@ -549,6 +549,12 @@ header {
 					font-style: normal;
 					line-height: 60px;
 				}
+			}
+		}
+		// Every other list row has slightly darker background
+		&:nth-of-type(even) {
+			.user-stats-med-inner {
+				background-color: darken($blue, 5%);
 			}
 		}
 	}
