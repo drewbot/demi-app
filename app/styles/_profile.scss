@@ -1,0 +1,107 @@
+// ----- Profile -----
+.profile {
+	background-color: $darkblue;
+	padding: 35px 15px 35px 15px;
+	.profile-image {
+		padding: 0 15px 0 15px;
+		img {
+			display: block;
+	    margin: auto;
+			width: 100%;
+			max-width: 270px;
+			border-radius: 50%;
+		}
+	}
+	.profile-info {
+		height: 270px;
+		p {
+			font-size: 1.2em;
+			font-weight: 200;
+			color: darken($white, 10%);
+			span {
+				padding-right: 10px;
+				font-size: 0.85em;
+				font-weight: 600;
+				color: lighten($blue, 15%);
+			}
+		}
+		a {
+			display: inline-block;
+			font-weight: 200;
+			color: darken($white, 10%);
+			text-decoration: underline;
+			cursor: pointer;
+			&:hover {
+				color: $bluegreen;
+			}
+		}
+	}
+	.stats-wide {
+		padding-bottom: 10px;
+		// If there were to be a wide box at the bottom the last would have bottom padding removed
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+		.stats-wide-inner {
+			padding: 15px;
+			height: 100px;
+			background-color: $blue;
+			transition: all 200ms ease-in;
+			&:hover {
+				background-color: darken($blue, 18%);
+				border-right: 4px solid $bluegreen;
+				cursor: pointer;
+				.stats-content {
+					color: $bluegreen;
+				}
+			}
+			.stats-content {
+				margin: 0 auto;
+				display: inline-block;
+				@include secondary-text(3.8em, darken($white, 3%));
+				.stats-number {
+					display: inline-block;
+				}
+				.stats-text {
+					display: inline-block;
+					font-size: 0.4em;
+					line-height: 0.7em;
+				}
+			}
+		}
+	}
+	.stats-half {
+		padding-bottom: 10px;
+		// Only the last two have padding bottom removed
+		&:nth-last-of-type(-n+2) {
+			padding-bottom: 0;
+		}
+		.stats-half-inner {
+			padding: 15px;
+			height: 75px;
+			background-color: $blue;
+			transition: all 200ms ease-in;
+			&:hover {
+				background-color: darken($blue, 18%);
+				cursor: pointer;
+				border-right: 3px solid $bluegreen;
+				.stats-content {
+					color: $bluegreen;
+				}
+			}
+			.stats-content {
+				margin: 0 auto;
+				display: inline-block;
+				@include secondary-text(2.6em, darken($white, 3%));
+				.stats-number {
+					display: inline-block;
+				}
+				.stats-text {
+					display: inline-block;
+					font-size: 0.4em;
+					line-height: 0.6em;
+				}
+			}
+		}
+	}
+}

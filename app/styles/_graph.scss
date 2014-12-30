@@ -1,0 +1,118 @@
+// ----- Graph Section -----
+.graph-1 {
+	padding: 35px 15px 35px 15px;
+	background-color: $darkblue;
+	.graph-key {
+		margin-bottom: 45px;
+		color: $white;
+		.graph-key-item {
+			&:first-of-type {
+				.key-item-swatch {
+					background-color: $red;
+				}
+			}
+			&:nth-of-type(2) {
+				.key-item-swatch {
+					background-color: $orange;
+				}
+			}
+			&:nth-of-type(3) {
+				.key-item-swatch {
+					background-color: $yellow;
+				}
+			}
+			&:nth-of-type(4) {
+				.key-item-swatch {
+					background-color: $green;
+				}
+			}
+			&:nth-of-type(5) {
+				.key-item-swatch {
+					background-color: $bluegreen;
+				}
+			}
+			.key-item-swatch {
+				display: inline-block;
+				margin-right: 5px;
+				width: 12px;
+				height: 12px;
+			}
+			p {
+				display: inline-block;
+				@include primary-text(1em, 200, light, $white);
+			}
+		}
+	}
+	.user-card-small {
+		padding: 25px;
+		height: 230px;
+		background-color: $blue;
+		color: $white;
+		font-weight: 200;
+		text-align: center;
+		line-height: 1.2em;
+		img {
+			display: inline-block;
+	    margin: auto;
+	    margin: 0 0 16px 0;
+			width: 100%;
+			max-width: 126px;
+			border-radius: 50%;
+		}
+		.user-name {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		.user-type {
+
+		}
+	}
+	.user-stats-small {
+		margin-bottom: 10px;
+		padding: 15px;
+		height: 110px;
+		background-color: $blue;
+		color: $white;
+		text-align: center;
+		line-height: 1.6em;
+		// The last of these in a column will have no bottom padding
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		.user-stats-title {
+			font-weight: 200;
+		}
+		.user-stats-count {
+			@include secondary-text(1.4em, $white);
+		}
+	}
+	.user-graph {
+		padding-bottom: 30px;
+		&:last-of-type {
+			padding-bottom: 0px;
+		}
+		.user-graph-inner {
+			padding: 30px 15px 30px 0;
+			height: 230px;
+			background-color: $blue;
+			color: $white;
+			.bar {
+				&:first-of-type {
+					@include bar(45%, $bluegreen);
+				}
+				&:nth-of-type(2) {
+					@include bar(67%, $green);
+				}
+				&:nth-of-type(3) {
+					@include bar(32%, $yellow);
+				}
+				&:nth-of-type(4) {
+					@include bar(24%, $orange);
+				}
+				&:nth-of-type(5) {
+					@include bar(7%, $red);
+				}
+			}
+		}
+	}
+}

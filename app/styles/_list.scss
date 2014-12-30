@@ -1,0 +1,89 @@
+// ----- List Section 1 -----
+.list-module {
+	padding: 35px 15px 35px 15px;
+	background-color: $darkblue;
+	.user-card-med {
+		padding-bottom: 10px;
+		.user-card-med-inner {
+			padding: 30px;
+			height: 430px;
+			background-color: $blue;
+			color: $white;
+			font-weight: 200;
+			text-align: center;
+			line-height: 1.2em;
+			img {
+				display: inline-block;
+		    margin: auto;
+		    margin: 0 0 16px 0;
+				width: 100%;
+				max-width: 180px;
+				border-radius: 50%;
+			}
+			.user-name {
+				font-size: 1.2em;
+				font-weight: 400;
+			}
+		}
+	}
+	.pull-right {
+		padding: 0;
+		// Remove bottom padding from the last user-stats-med
+		&:last-of-type {
+			.user-stats-med {
+				padding-bottom: 0;
+			}
+		}
+		.user-stats-med {
+			padding-bottom: 10px;
+			.user-stats-med-inner {
+				position: relative;
+				padding: 20px 15px 20px 15px;
+				height: 100px;
+				background-color: $blue;
+				font-weight: 200;
+				font-style: italic;
+				color: $white;
+				text-align: center;
+				line-height: 1.6em;
+				transition: all 200ms ease-in;
+				&:hover {
+					// padding-left: 19px;
+					background-color: darken($blue, 18%);
+					border-right: 4px solid $bluegreen;
+					cursor: pointer;
+					p {
+						color: $bluegreen;
+					}
+					.link-helper {
+						display: inline-block;
+					}
+				}
+				.assignment {
+					font-style: normal;
+					font-size: 1.2em;
+				}
+				.assessment {
+					@include secondary-text(1.4em, $bluegreen);
+					font-style: normal;
+					line-height: 60px;
+				}
+				.link-helper {
+					display: none;
+					width: 80%;
+					position: absolute;
+					top: 65px;
+					left: 10%;
+					right: 10%;
+					transition: all 200ms ease-in;
+				}
+			}
+		}
+		// Every other list row has slightly darker background
+		&:nth-of-type(even) {
+			.user-stats-med-inner {
+				background-color: darken($blue, 5%);
+			}
+		}
+	}
+}
