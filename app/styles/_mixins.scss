@@ -44,6 +44,7 @@
 @mixin bar($width, $color) {
 	height: 34px;
 	div {
+        // bar
 		&:first-of-type {
 			display: inline-block;
 			width: $width;
@@ -51,6 +52,7 @@
 			background-color: darken($color, 5%);
 			border-right: 3px solid lighten($color, 10%);
 		}
+        // text
 		&:nth-of-type(2) {
 			display: inline-block;
 			padding: 7px 0 30px 10px;
