@@ -44,6 +44,7 @@
 		}
 	}
 	.user-card-small {
+		margin-bottom: 10px;
 		padding: 25px;
 		height: 230px;
 		background-color: $blue;
@@ -114,5 +115,13 @@
 				}
 			}
 		}
+	}
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+	.graph-1 {
+		.user-card-small {
+	 		margin-bottom: 0px;
+	 	}
 	}
 }

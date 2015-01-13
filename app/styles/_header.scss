@@ -23,14 +23,19 @@ header {
       }
 	  }
   }
-  .logout {
-    button {
+  .settings, .logout {
+    text-align: right;
+    padding: 7px 10px 0 0;
+    a {
       @include primary-text(1.2em, 300, normal, $white);
-      @include primary-button(lighten($blue, 2%) , $white, 0px, 0px);
-      span {
-        padding-top: 2px;
-        font-size: 1.2em;
+      text-decoration: underline;
+      .glyphicon {
+        padding: 2px 5px 0 0;
+        font-size: 0.8em;
       }
-    }
+      &:hover {
+        color: $bluegreen;
+      }
+    } 
   }
 }
