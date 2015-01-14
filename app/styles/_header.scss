@@ -1,8 +1,18 @@
 // ----- Header -----
 header {
+  position: relative;
 	padding: 35px 15px 35px 15px;
 	background-color: $blue;
 	height: 110px;
+  .menu-button {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 50%;
+    button {
+      @include header-button($blue, $white);
+    }
+  }
   nav {
   	ul {
   		margin-bottom: 0;
@@ -25,11 +35,11 @@ header {
   }
   .settings, .logout {
     text-align: right;
-    padding: 7px 10px 0 0;
+    padding: 10px 10px 0 0;
     a {
-      margin-left: 40px;
-      @include primary-text(1.2em, 300, normal, $white);
-      text-decoration: underline;
+      margin-left: 30px;
+      @include primary-text(1em, 300, normal, $white);
+      // text-decoration: underline;
       .glyphicon {
         margin: 2px 5px 0 0;
         font-size: 0.8em;
@@ -38,5 +48,21 @@ header {
         color: $bluegreen;
       }
     } 
+  }
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+  header {
+    .menu-button {
+      button {
+        font-size: 1.2em;
+      }
+    }
+    .settings, .logout {
+      padding-top: 7px;
+      a {
+        font-size: 1.2em;
+      } 
+    }
   }
 }

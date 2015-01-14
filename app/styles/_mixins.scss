@@ -40,6 +40,29 @@
     }
 }
 
+@mixin header-button($bg-color, $color) {
+    padding: 36px 10px 36px 10px;
+    height: 110px;
+    // width: 100%;
+    background-color: $bg-color;
+    @include secondary-text(1.1em, $color);
+    text-align: center;
+    border: none;
+    outline: none;
+    @include transition(all 100ms ease-in);
+    &:hover {
+        background-color: darken($bg-color, 15%);
+        color: $bluegreen;
+        border-bottom: 3px solid $bluegreen;
+    }
+    &:active {
+
+    }
+    span {
+        margin-right: 10px;
+    }
+}
+
 // Bar Graph Bar
 @mixin bar($color) {
 	height: 34px;

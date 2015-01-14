@@ -6,7 +6,7 @@
 		padding-bottom: 30px;
 		.user-card-med-inner {
 			padding: 30px;
-			height: 430px;
+			height: 512px;
 			background-color: $blue;
 			color: $white;
 			font-weight: 200;
@@ -23,6 +23,24 @@
 			.user-name {
 				font-size: 1.2em;
 				font-weight: 400;
+			}
+			.donut-chart {
+				position: relative;
+				margin-top: 15px;
+				.completion-percent {
+					position: absolute;
+					margin: auto;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					width: 90px;
+					height: 80px;
+					text-align: center;
+					p:first-of-type {
+						@include secondary-text(1.4em, $white);
+					}
+				}
 			}
 		}
 	}
