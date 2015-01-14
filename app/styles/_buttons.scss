@@ -36,9 +36,6 @@
 	  	}
 	  }
 	  &:nth-of-type(5) {
-	  	// p {
-	  	// 	margin: 0 0 11px 0;
-	  	// }
 	  	button {
 	      @include primary-button($bluegreen, $white, 0px, 0px);
 	  	}
@@ -49,79 +46,22 @@
 	  	}
 	  }
 	  &:nth-of-type(7) {
-	  	// p {
-	  	// 	margin: 0 0 11px 0;
-	  	// }
 	  	button {
 	      @include primary-button($lightblue, $blue, 0px, 0px);
 	  	}
 	  }
 	  &:nth-of-type(8) {
-	  	// p {
-	  	// 	margin: 0 0 11px 0;
-	  	// }
 	  	button {
 	      @include primary-button($lightbluegrey, $blue, 0px, 0px);
 	  	}
 	  }
 	  &:nth-of-type(9) {
-	  	// p {
-	  	// 	margin: 0 0 11px 0;
-	  	// }
 	  	button {
 	      @include primary-button($darkblue, $white, 0px, 0px);
 	  	}
 	  }
   }
 }
-
-// @media only screen and (min-width: 356px) {
-// 	.button-gallery {
-// 	  .button-wrapper {
-// 	  	&:nth-of-type(9) {
-// 		  	p {
-// 		  		margin: 0 0 30px 0;
-// 		  	}
-// 		  }
-// 	  }
-// 	}
-// }
-
-// @media only screen and (min-width: 367px) {
-// 	.button-gallery {
-// 	  .button-wrapper {
-// 	  	&:nth-of-type(7) {
-// 		  	p {
-// 		  		margin: 0 0 30px 0;
-// 		  	}
-// 		  }
-// 	  }
-// 	}
-// }
-
-// @media only screen and (min-width: 385px) {
-// 	.button-gallery {
-// 	  .button-wrapper {
-// 	  	&:nth-of-type(5) {
-// 		  	p {
-// 		  		margin: 0 0 30px 0;
-// 		  	}
-// 		  }
-// 	  }
-// 	}
-// }
-
-// @media only screen and (min-width: 393px) {
-// 	.button-gallery {
-// 	  .button-wrapper {
-// 	  	&:nth-of-type(8) {
-// 		  	p {
-// 		  		margin: 0 0 30px 0;
-// 		  	}
-// 		  }
-// 	  }
-// 	}
-// }
 
 @media only screen and (min-width: $screen-sm-min) {
 	.button-gallery {

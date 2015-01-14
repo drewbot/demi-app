@@ -41,13 +41,12 @@
 }
 
 // Bar Graph Bar
-@mixin bar($width, $color) {
+@mixin bar($color) {
 	height: 34px;
 	div {
         // bar
 		&:first-of-type {
 			display: inline-block;
-			width: $width;
 			height: 34px;
 			background-color: darken($color, 5%);
 			border-right: 3px solid lighten($color, 10%);

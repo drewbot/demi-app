@@ -1,6 +1,6 @@
 // ----- List Section 1 -----
 .list-module {
-	padding: 35px 15px 25px 15px;
+	padding: 35px 15px 5px 15px;
 	background-color: $darkblue;
 	.user-card-med {
 		padding-bottom: 30px;
@@ -31,7 +31,7 @@
 		.user-stats-med {
 			padding-bottom: 10px;
 			&:last-of-type {
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 				.user-stats-med-inner {
 					&:hover {
 						// padding-left: 19px;
@@ -114,6 +114,7 @@
 // below 992
 @media only screen and (min-width: $screen-md-min) {
 	.list-module {
+		padding-bottom: 30px;
 		.pull-right {
 			.user-stats-med {
 				&:last-of-type {
