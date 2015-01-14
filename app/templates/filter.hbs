@@ -7,15 +7,35 @@
           <span class='button-text'>previous</span>
         </button>
       </div>
-      <div class='button-wrapper col-xs-4'>
+
+      {{!-- Via JS, data attributed --}}
+      <div class="dropdown button-wrapper col-xs-4">
         <p>Dropdown</p>
-        <button class='select dropdown-toggle'>
+        <button class="select" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class='button-text'>select</span>
-          <span class='caret'></span>
+          <span class="caret"></span>
         </button>
-        <ul role='menu' aria-labelledby='dropdownMenu1' class='dropdown-menu' id='timeline-list-dropdown'>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li>Thing 1</li>
+          <li>Thing 2</li>
         </ul>
       </div>
+
+      {{!-- Via CSS component --}}
+      {{!-- <div class="dropdown button-wrapper col-xs-4">
+        <p>Dropdown</p>
+        <button class="select dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          <span class='button-text'>select</span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </div> --}}
+
       <div class='button-wrapper col-xs-4 col-sm-3'>
         <button>
           <span class='button-text'>next</span>

@@ -20,6 +20,7 @@
 		ul {
 			list-style: none;
 			padding-left: 0;
+			text-align: center;
 			li {
 				p {
 					padding-bottom: 2px;
@@ -146,6 +147,17 @@
 						font-size: 0.38em;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+
+	.profile {
+		.profile-info {
+			ul {
+				text-align: left;
 			}
 		}
 	}
