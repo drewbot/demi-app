@@ -78,7 +78,7 @@
 				}
 				.stats-text {
 					display: inline-block;
-					font-size: 0.4em;
+					font-size: 0.38em;
 					line-height: 0.7em;
 				}
 			}
@@ -122,7 +122,7 @@
 				}
 				.stats-text {
 					display: inline-block;
-					font-size: 0.32em;
+					font-size: 0.3em;
 					line-height: 0.6em;
 				}
 			}
@@ -169,5 +169,29 @@
 		.profile-image, .profile-info {
 	 		margin-bottom: 0px;
 	 	}
+	 	.stats-half {
+			.stats-half-inner {
+				.stats-content {
+					.stats-text {
+						font-size: 0.36em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+
+	.profile {
+	 	.stats-half {
+			.stats-half-inner {
+				.stats-content {
+					.stats-text {
+						font-size: 0.4em;
+					}
+				}
+			}
+		}
 	}
 }

@@ -37,7 +37,7 @@
     button {
       @include primary-button($lightblue, $blue, 0px, 0px);
       font-weight: 300;
-      font-size: 1.2em;
+      font-size: 1em;
       .glyphicon {
       	font-size: 0.84em;
       }
@@ -45,7 +45,20 @@
     .select {
     	@include primary-button($blue, $white, 0px, 0px);
     	font-weight: 300;
-      font-size: 1.2em;
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-xs-min) {
+  .filter-module {
+    .button-wrapper {
+      button {
+        font-size: 1.2em;
+      }
+      .select {
+        font-size: 1.2em;
+      }
     }
   }
 }

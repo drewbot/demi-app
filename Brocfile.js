@@ -16,12 +16,16 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 // along with the exports of each module as its value.
 
 var app = new EmberApp({
-  'ember-cli-bootstrap-sass': {
-    'importBootstrapJS': true
-  }
+  // 'ember-cli-bootstrap-sass': {
+  //   'importBootstrapJS': true
+  // }
 });
 
 module.exports = app.toTree();
 
 // bootstrap
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/javascripts/bootstrap.js');
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/stylesheets/_bootstrap.scss');
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/*', {
+  destDir: 'fonts'
+});

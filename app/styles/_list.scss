@@ -38,6 +38,7 @@
 					height: 80px;
 					text-align: center;
 					p:first-of-type {
+						margin-bottom: 5px;
 						@include secondary-text(1.4em, $white);
 					}
 				}
