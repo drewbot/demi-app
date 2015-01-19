@@ -26,6 +26,15 @@ module.exports = app.toTree();
 // bootstrap
 app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/javascripts/bootstrap.js');
 app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/stylesheets/_bootstrap.scss');
-app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/*', {
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/glyphicons-halflings-regular.eot', {	
+  destDir: 'fonts'
+});
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/glyphicons-halflings-regular.svg', {	
+  destDir: 'fonts'
+});
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf', {	
+  destDir: 'fonts'
+});
+app.import('node_modules/ember-cli-bootstrap-sass/vendor/bootstrap-sass-offical/assets/fonts/bootstrap/glyphicons-halflings-regular.woff', {	
   destDir: 'fonts'
 });
