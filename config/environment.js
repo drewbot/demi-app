@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'demi-app',
     environment: environment,
-    baseURL: 'demi-app',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
